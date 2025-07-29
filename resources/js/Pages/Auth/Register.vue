@@ -44,7 +44,7 @@ const submit = () => {
             <PrimaryBtn :disabled="form.processing">Register</PrimaryBtn>
             <p class="text-center text-md mt-4">
                 Already have an account?
-                <TextLink routeName="home" label="Login" />
+                <TextLink routeName="login" label="Login" />
             </p>
         </form>
     </Container>
