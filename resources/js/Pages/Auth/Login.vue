@@ -5,8 +5,13 @@ import TextLink from "../../components/TextLink.vue";
 import InputField from "../../components/InputField.vue";
 import PrimaryBtn from "../../components/PrimaryBtn.vue";
 import ErrorMessage from "../../components/ErrorMessage.vue";
+import SessionMessage from "../../components/SessionMessage.vue";
 import CheckBox from '../../components/CheckBox.vue';
 import { useForm } from "@inertiajs/vue3";
+
+defineProps({
+    status: String,
+})
 
 const form = useForm({
     email: "",
@@ -22,17 +27,14 @@ const submit = () => {
 </script>
 
 <template>
-    <Head title="- Login" />
+    <Head title="Login" />
     <Container class="w-1/2">
         <div class="mb-8 text-center">
             <Title>Login to your account</Title>
-            <p>
-                Need an account?
-                <TextLink routeName="register" label="Register" />
-            </p>
         </div>
 
         <!-- Errors messages -->
+         <SessionMessage :message="status" />
         <ErrorMessage :errors="form.errors" />
 
         <form @submit.prevent="submit" class="space-y-6">
@@ -50,10 +52,11 @@ const submit = () => {
                     Remember me
                 </CheckBox>
 
-                <TextLink routeName="home" label="Forgot Password?" />
+                <TextLink routeName="password.request" label="Forgot Password?" />
             </div>
 
-            <PrimaryBtn :disabled="form.processing">Login</PrimaryBtn>
+            <PrimaryBtn :disabled="form.processing">Login</PrimaryBtn>            
+            <p class="text-center text-md mt-4">Need an account? <TextLink routeName="register" label="Register" /> </p>
         </form>
     </Container>
 </template>

@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="my-6">
+    <div class="mb-6 mt-2">
         <div>
             <label
                 :for="label"
@@ -38,7 +38,7 @@ defineProps({
                 :placeholder="placeholder"
                 v-model="model"
                 required
-                class="block w-full rounded-md pr-3 pl-9 text-sm dark:test-slate-900 border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-indigo-400 focus:border-indigo-400 placeholder:text-slate-400"
+                class="block w-full rounded-md pr-3 pl-9 text-sm dark:text-slate-900 border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-indigo-400 focus:border-indigo-400 placeholder:text-slate-400"
             />
         </div>
     </div>
