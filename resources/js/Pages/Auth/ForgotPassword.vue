@@ -33,7 +33,7 @@ const submit = () => {
     <SessionMessage :message="status" />
 
     <form @submit.prevent="submit">
-      <PrimaryBtn :disabled="form.processing">Send Password Reset Link</PrimaryBtn>
+      <PrimaryBtn class="block w-full" :disabled="form.processing">Send Password Reset Link</PrimaryBtn>
     </form>
 
   </Container>

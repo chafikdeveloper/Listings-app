@@ -37,7 +37,7 @@ const submit = () => {
     <InputField label="Confirm Password" icon="key" type="password" v-model="form.password_confirmation" />
 
     <form @submit.prevent="submit">
-      <PrimaryBtn :disabled="form.processing">Reset Password</PrimaryBtn>
+      <PrimaryBtn class="block w-full" :disabled="form.processing">Reset Password</PrimaryBtn>
     </form>
   </Container>
 </template>

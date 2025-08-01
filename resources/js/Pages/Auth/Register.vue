@@ -41,7 +41,7 @@ const submit = () => {
 
             <p class="text-slate-500 text-sm mt-6 mb-4 dark:text-slate-400">By creating an account, you agree to our Terms of Service and Privacy Policy</p>
 
-            <PrimaryBtn :disabled="form.processing">Register</PrimaryBtn>
+            <PrimaryBtn class="block w-full" :disabled="form.processing">Register</PrimaryBtn>
             <p class="text-center text-md mt-4">
                 Already have an account?
                 <TextLink routeName="login" label="Login" />

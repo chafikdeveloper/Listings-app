@@ -27,7 +27,7 @@ const submit = () => {
     <SessionMessage :message="message" />
 
     <form @submit.prevent="submit">
-      <PrimaryBtn :disabled="form.processing">Resent Verification Email</PrimaryBtn>
+      <PrimaryBtn class="block w-full" :disabled="form.processing">Resent Verification Email</PrimaryBtn>
     </form>
   </Container>
 </template>

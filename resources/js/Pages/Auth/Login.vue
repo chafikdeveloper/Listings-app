@@ -21,7 +21,7 @@ const form = useForm({
 
 const submit = () => {
     form.post(route("login"), {
-        onFinish: () => form.reset("password"),
+        onError: () => form.reset("password"),
     });
 };
 </script>
@@ -55,7 +55,7 @@ const submit = () => {
                 <TextLink routeName="password.request" label="Forgot Password?" />
             </div>
 
-            <PrimaryBtn :disabled="form.processing">Login</PrimaryBtn>            
+            <PrimaryBtn class="block w-full" :disabled="form.processing">Login</PrimaryBtn>            
             <p class="text-center text-md mt-4">Need an account? <TextLink routeName="register" label="Register" /> </p>
         </form>
     </Container>
